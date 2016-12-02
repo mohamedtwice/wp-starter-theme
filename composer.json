@@ -15,15 +15,7 @@
       "url": "https://wpackagist.org"
     }
   ],
-  "extra": {
-  	"installer-paths": {
-      "../../plugins/{$name}/": [
-        "wpackagist-plugin/*",
-        "type:wordpress-plugin"
-      ]
-  	}
-	},
   "require": {
-	  "wpackagist-plugin/timber-library": "^1"
+	  "wpackagist-plugin/timber-library": "~1"
   }
 }
