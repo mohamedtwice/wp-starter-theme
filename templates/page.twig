@@ -1,5 +1,15 @@
 {% extends "base.twig" %}
 
+{% block head_meta %}
+	{% include "head-meta.twig" with {
+			noindex: post.meta_noindex,
+			title: post.meta_title ?: null,
+			description: post.meta_description ?: post.content|excerpt(24, '…'),
+			image: post.thumbnail ? TimberImage(post.thumbnail).src : null,
+		}
+	%}
+{% endblock %}
+
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">

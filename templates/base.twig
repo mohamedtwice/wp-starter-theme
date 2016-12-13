@@ -1,10 +1,22 @@
-{% block html_head_container %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <title>{{ site.title }}</title>
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
+    <meta charset="{{site.charset}}" />
+	{% block head_meta %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="{{site.theme.link}}/static/css/main.css" type="text/css" media="screen" />
+    <link rel="pingback" href="{{site.pingback_url}}" />
+
+    {{function('wp_head')}}
+	{% block head %}{% endblock %}
+
 	</head>
-{% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
 		<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">

@@ -18,6 +18,10 @@
 
 `bin/` and `tests/` ... basically don't worry about (or remove) these unless you know what they are and want to.
 
+## Development
+
+In order to compile the assets (namely the scss) into `/static`, run `gulp`. Gulp will continuously watch for changes and rebuild the assets.
+
 ## Other Resources
 
 The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great, so reference those often. Also, check out these articles and projects for more info:

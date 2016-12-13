@@ -1,0 +1,95 @@
+{
+    "key": "group_584edcb4e1d5a",
+    "title": "SEO Meta",
+    "fields": [
+        {
+            "default_value": "",
+            "maxlength": 95,
+            "placeholder": "Ideally less than 55 characters",
+            "prepend": "",
+            "append": "",
+            "key": "field_584edd3cb31f2",
+            "label": "Meta Title",
+            "name": "meta_title",
+            "type": "text",
+            "instructions": "Title for search results and embedded posts in social media",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": 200,
+            "placeholder": "Ideally about 155 characters",
+            "rows": 2,
+            "key": "field_584eddf0b31f3",
+            "label": "Meta Description",
+            "name": "meta_description",
+            "type": "textarea",
+            "instructions": "Description for search results and embedded posts in social media",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Do not index this page",
+            "ui": 0,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nein",
+            "key": "field_584edec0b31f4",
+            "label": "Do not index this page",
+            "name": "meta_noindex",
+            "type": "true_false",
+            "instructions": "When the box is checked, search engines are instructed not to list this page in their search results (noindex flag)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1481634854
+}

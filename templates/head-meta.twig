@@ -1,0 +1,8 @@
+<meta name="title" content="{{title ?: site.title}}">
+    <meta name="description" content="{{description ?: site.description}}">
+
+    <meta name="og:title" content="{{title ?: site.title}}">
+    <meta name="og:description" content="{{description ?: site.description}}">
+    {% if image %}<meta name="og:image" content="{{image}}">{% endif %}
+
+    {% if noindex %}<meta name="robots" content="noindex,follow">{% endif %}
