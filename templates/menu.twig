@@ -1,9 +1,20 @@
 {% if menu %}
 	<ul class="nav navbar-nav">
 	{% for item in menu %}
-		<li class="{{item.classes | join('nav-item ')}}">
-			<a href="{{item.get_link}}" class="nav-link">{{item.title}}</a>
-			{% include "menu.twig" with {'menu': item.get_children} %}
+		{% set children = item.get_children %}
+		<li
+			class="nav-item
+				{{ item.current ? 'active' : '' }}
+				{{ children ? 'dropdown' : '' }}"
+		>
+			<a
+				href="{{item.get_link}}"
+				class="nav-link {{ children ? 'dropdown-toggle' : '' }}"
+				{{ children ? 'data-toggle="dropdown"' : '' }}
+				aria-expanded="false"
+			>{{ item.title }}
+			</a>
+			{% include "dropdown.twig" with { 'dropdown': children } %}
 		</li>
 	{% endfor %}
 	</ul>

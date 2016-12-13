@@ -1,0 +1,7 @@
+{% if dropdown %}
+	<div class="dropdown-menu">
+		{% for item in dropdown %}
+			<a class="dropdown-item" href="{{item.get_link}}">{{item.title}}</a>
+		{% endfor %}
+	</div>
+{% endif %}
