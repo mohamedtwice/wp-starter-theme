@@ -32,8 +32,8 @@ class StarterSite extends TimberSite
 		add_theme_support('post-thumbnails');
 		add_theme_support('menus');
 
-		add_filter('timber_context', array($this, 'add_to_context'));
-		add_filter('get_twig', array($this, 'add_to_twig'));
+		add_filter('timber_context', array($this, 'addToContext'));
+		add_filter('get_twig', array($this, 'addToTwig'));
 
 		parent::__construct();
 	}
@@ -44,7 +44,7 @@ class StarterSite extends TimberSite
 	 * @param array  $context The original context
 	 * @return array Context with additional data
 	 */
-	function add_to_context($context)
+	function addToContext($context)
 	{
 		$context['foo'] = 'bar';
 
@@ -62,7 +62,7 @@ class StarterSite extends TimberSite
 	 *
 	 * It can be used in twig templates like so: `{{ post.content|myfoo }}`.
 	 * `myfoo` is the identifier passed in as the first parameter to
-	 * `$twig->addFillter`, called in `add_to_twig` in this example.
+	 * `$twig->addFillter`, called in `addToTwig` in this example.
 	 *
 	 * @param  string $text The text piped into the filter
 	 * @return string       The filtered text
@@ -78,7 +78,7 @@ class StarterSite extends TimberSite
 	 *
 	 * @param Twig $twig The twig instance gets passed in
 	 */
-	function add_to_twig($twig)
+	function addToTwig($twig)
 	{
 		$twig->addExtension(new Twig_Extension_StringLoader());
 		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
