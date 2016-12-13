@@ -1,17 +1,4 @@
 body {
   padding-top: 5rem;
 
-  // Adapt to the admin bar when it's present
-  &.admin-bar {
-    .navbar-fixed-top {
-      margin-top: 32px;
-    }
-
-    // This is where the admin bar collapses and becomes 46px high
-    @media (max-width: 782px) {
-      .navbar-fixed-top {
-        margin-top: 46px;
-      }
-    }
-  }
 }
