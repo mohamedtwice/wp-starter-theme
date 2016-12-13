@@ -3,6 +3,7 @@
 
 ## Features
 
+- HTML5 semantic markup
 - Uses Twitter Bootstrap v4 (fully customizable thanks to SCSS)
 - Sticky main navigation
 - OpenGraph and SEO Metadata
