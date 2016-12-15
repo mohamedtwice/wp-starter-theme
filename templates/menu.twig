@@ -14,7 +14,7 @@
 				aria-expanded="false"
 			>{{ item.title }}
 			</a>
-			{% include "dropdown.twig" with { 'dropdown': children } %}
+			{% include "dropdown.twig" with { 'parent': item, 'dropdown': children } %}
 		</li>
 	{% endfor %}
 	</ul>

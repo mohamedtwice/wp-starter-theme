@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags always come first -->
     <title>{{ site.title }}</title>
 
     <meta charset="{{site.charset}}" />
@@ -53,5 +52,7 @@
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
+
+  <script type="text/javascript" src="{{site.theme.link}}/static/js/main.js"></script>
 	</body>
 </html>

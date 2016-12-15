@@ -12,7 +12,7 @@ if (! class_exists('Timber')) {
 	return;
 }
 
-Timber::$dirname = array('templates', 'views');
+Timber::$dirname = ['templates', 'views'];
 
 /**
  * Our Theme class.
@@ -32,11 +32,24 @@ class StarterSite extends TimberSite
 		add_theme_support('post-thumbnails');
 		add_theme_support('menus');
 
-		add_filter('timber_context', array($this, 'addToContext'));
-		add_filter('get_twig', array($this, 'addToTwig'));
+		add_filter('timber_context', [$this, 'addToContext']);
+		add_filter('get_twig', [$this, 'addToTwig']);
+
+		add_action('admin_enqueue_scripts', [$this, 'limit_menu_depth']);
 
 		parent::__construct();
 	}
+
+	/**
+	* Limit max menu depth in admin panel to 2
+	*/
+	function limit_menu_depth( $hook ) {
+		if ( $hook != 'nav-menus.php' ) return;
+
+		// override default value right after 'nav-menu' JS
+		wp_add_inline_script('nav-menu', 'wpNavMenu.options.globalMaxDepth = 1;', 'after');
+	}
+
 
 	/**
 	 * Hook to add variables to the global template context.
@@ -81,7 +94,7 @@ class StarterSite extends TimberSite
 	function addToTwig($twig)
 	{
 		$twig->addExtension(new Twig_Extension_StringLoader());
-		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
+		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', [$this, 'myfoo']));
 		return $twig;
 	}
 

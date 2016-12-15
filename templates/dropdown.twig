@@ -1,5 +1,9 @@
 {% if dropdown %}
 	<div class="dropdown-menu">
+		{% if parent %}
+			<a class="dropdown-item" href="{{parent.get_link}}">{{parent.title}}</a>
+			<div class="dropdown-divider"></div>
+		{% endif %}
 		{% for item in dropdown %}
 			<a class="dropdown-item" href="{{item.get_link}}">{{item.title}}</a>
 		{% endfor %}
