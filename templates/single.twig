@@ -11,12 +11,10 @@
 {% endblock %}
 
 {% block content %}
-	<article class="post-type-{{post.post_type}}">
+	<article class="container post-type-{{post.post_type}}">
 		<section class="article-content">
 			<h1>{{post.title}}</h1>
-			<p class="blog-author">
-				<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}
-			</p>
+			<p class="author">{{ post.by_line | raw }} &bull; {{ post.post_date|date }}</p>
 			<div class="article-body">
 				{{post.content}}
 			</div>
@@ -24,7 +22,6 @@
 	{% if post.comment_status != 'closed' %}
 		<section class="comments">
 			<div class="respond">
-				<h2>Comments</h2>
 				{{ fn('comment_form', {'class_submit': 'btn btn-primary'}) }}
 			</div>
 			<div class="responses">

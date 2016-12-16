@@ -1,0 +1,55 @@
+/**
+ * Responsive Typography
+ */
+
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+  @extend .blockquote;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  cite {
+    @extend .blockquote-footer;
+  }
+}
+
+/**
+ * Tables
+ */
+table {
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-hover;
+
+  thead {
+    @extend .thead-default;
+  }
+}

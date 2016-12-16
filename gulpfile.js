@@ -27,7 +27,8 @@ gulp.task('sass', function () {
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./static/css'));
+  .pipe(gulp.dest('./static/css'))
+  .pipe(notify('SCSS compiled...'));
 });
 
 gulp.task('js', function() {

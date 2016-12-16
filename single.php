@@ -11,6 +11,12 @@
 
 $context = Timber::get_context();
 $post = Timber::query_post();
+
+$post->by_line = sprintf(
+	__("By %s", 'wp-starter-theme'),
+	'<a href="'.$post->author->path.'">'.$post->author->name.'</a>'
+);
+
 $context['post'] = $post;
 
 if ( post_password_required( $post->ID ) ) {
