@@ -4,7 +4,7 @@
     <title>{{ site.title }}</title>
 
     <meta charset="{{site.charset}}" />
-	{% block head_meta %}{% endblock %}
+    {% block head_meta %}{% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,8 +13,7 @@
     <link rel="pingback" href="{{site.pingback_url}}" />
 
     {{function('wp_head')}}
-	{% block head %}{% endblock %}
-
+	  {% block head %}{% endblock %}
 	</head>
 
 	<body class="{{body_class}}" data-template="base.twig">
@@ -24,10 +23,7 @@
 			{% include "menu.twig" with {'menu': menu.get_items} %}
 		</nav>
 
-		<section role="main" class="container-fluid">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-			</div>
+		<div class="wrapper {{sidebar_class}}">
 			{% if sidebar %}
 				<div class="row">
 					<div class="col-md-9">
@@ -44,15 +40,15 @@
 					</div>
 				</div>
 			{% endif %}
-		</section>
+    </div>
 
 		{% block footer %}
 			<footer class="container-fluid">
 				{% include 'footer.twig' %}
 			</footer>
-			{{ function('wp_footer') }}
 		{% endblock %}
 
-  <script type="text/javascript" src="{{site.theme.link}}/static/js/main.js"></script>
+    <script type="text/javascript" src="{{site.theme.link}}/static/js/main.js"></script>
+    {{ function('wp_footer') }}
 	</body>
 </html>
