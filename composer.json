@@ -4,10 +4,14 @@
   "type":"wordpress-theme",
   "minimum-stability" : "stable",
   "authors": [
-      {
-          "name": "jalil wahdatehagh",
-          "email": "jalil@sehrgute.software"
-      }
+    {
+        "name": "jalil wahdatehagh",
+        "email": "jalil@sehrgute.software"
+    },
+    {
+        "name": "joseph paul",
+        "email": "joseph@sehrgute.software"
+    }
   ],
   "repositories": [
     {
