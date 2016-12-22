@@ -1,3 +1,7 @@
 .navbar-fixed-top {
 	@include admin-sticky-fix;
 }
+
+.footer-nav {
+	float: right;
+}

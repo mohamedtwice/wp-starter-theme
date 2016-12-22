@@ -32,6 +32,12 @@ class StarterSite extends TimberSite
 		add_theme_support('post-thumbnails');
 		add_theme_support('menus');
 
+		// Register Menus
+		register_nav_menus([
+			'primary' => __('Primary Navigation', 'wp-starter-theme'),
+			'footer' => __('Footer Menu', 'wp-starter-theme')
+		]);
+
 		add_filter('timber_context', [$this, 'addToContext']);
 		add_filter('get_twig', [$this, 'addToTwig']);
 
@@ -61,7 +67,8 @@ class StarterSite extends TimberSite
 	{
 		$context['foo'] = 'bar';
 
-		$context['menu'] = new TimberMenu();
+		$context['menu'] = new TimberMenu('primary');
+		$context['footer_menu'] = new TimberMenu('footer');
 
 		$title = wp_title('–', false, 'right');
 		$this->title = $title ? $title.$this->name : $this->name;

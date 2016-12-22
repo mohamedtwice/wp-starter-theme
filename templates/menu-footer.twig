@@ -1,0 +1,11 @@
+{% if menu %}
+	<ul class="nav footer-nav">
+	{% for item in menu %}
+		<li class="nav-item {{ item.current ? 'active' : '' }}">
+			<a href="{{item.get_link}}" class="nav-link">
+				{{ item.title }}
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}
