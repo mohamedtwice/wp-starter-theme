@@ -1,0 +1,9 @@
+<ul class="social-links">
+{% for link in social_links %}
+	<li>
+	  <a href="{{ link.target }}" title="{{ link.title }}"{{ link.target_blank ? ' target="_blank"' : '' }}>
+	  	<i class="fa {{ link.icon }}"></i>
+	  </a>
+	</li>
+{% endfor %}
+</ul>

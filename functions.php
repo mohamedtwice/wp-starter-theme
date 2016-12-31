@@ -41,19 +41,55 @@ class StarterSite extends TimberSite
 		add_filter('timber_context', [$this, 'addToContext']);
 		add_filter('get_twig', [$this, 'addToTwig']);
 
-		add_action('admin_enqueue_scripts', [$this, 'limit_menu_depth']);
+		add_action('admin_enqueue_scripts', [$this, 'limitMenuDepth']);
+		add_action('wp_enqueue_scripts', [$this, 'enqueueStyles']);
+		add_action('init', [$this, 'createOptionsPages']);
 
 		parent::__construct();
 	}
 
 	/**
 	* Limit max menu depth in admin panel to 2
+	*
+	* @return void
 	*/
-	function limit_menu_depth( $hook ) {
+	function limitMenuDepth( $hook )
+	{
 		if ( $hook != 'nav-menus.php' ) return;
 
 		// override default value right after 'nav-menu' JS
 		wp_add_inline_script('nav-menu', 'wpNavMenu.options.globalMaxDepth = 1;', 'after');
+	}
+
+	/**
+	 * Create options pages using ACF to expose global theme settings.
+	 *
+	 * @return void
+	 */
+	function createOptionsPages()
+	{
+		if(function_exists('acf_add_options_page')) {
+			acf_add_options_page([
+				'page_title' => __('Social Links', 'wp-starter-theme'),
+				'icon_url' => 'dashicons-admin-links',
+				'autoload' => true
+			]);
+		}
+	}
+
+	/**
+	 * Required necessary external css files for the theme.
+	 *
+	 * @return void
+	 */
+	function enqueueStyles()
+	{
+		wp_enqueue_style(
+			'fontawesome',
+			'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+			null,
+			'4.7.0'
+		);
 	}
 
 
@@ -73,6 +109,8 @@ class StarterSite extends TimberSite
 		$title = wp_title('–', false, 'right');
 		$this->title = $title ? $title.$this->name : $this->name;
 		$context['site'] = $this;
+
+		$context['social_links'] = function_exists('get_field') ? get_field('social_links', 'options') : [];
 
 		return $context;
 	}

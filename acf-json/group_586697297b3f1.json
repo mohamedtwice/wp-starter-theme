@@ -1,0 +1,146 @@
+{
+    "key": "group_586697297b3f1",
+    "title": "Social Links",
+    "fields": [
+        {
+            "sub_fields": [
+                {
+                    "default_value": "",
+                    "placeholder": "https:\/\/www.linkedin.com\/in\/\u2026",
+                    "key": "field_5866972982baa",
+                    "label": "Link Target",
+                    "name": "target",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "key": "field_5866972982bb7",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "choices": {
+                        "fa-bandcamp": "Bandcamp",
+                        "fa-behance-square": "Behance",
+                        "fa-bitbucket-square": "Bitbucket",
+                        "fa-facebook-square": "Facebook",
+                        "fa-flickr": "Flickr",
+                        "fa-github-square": "GitHub",
+                        "fa-google-plus-square": "Google+",
+                        "fa-instagram": "Instagram",
+                        "fa-linkedin-square": "LinkedIn",
+                        "fa-medium": "Medium",
+                        "fa-pinterest-square": "Pinterest",
+                        "fa-reddit-square": "Reddit",
+                        "fa-skype": "Skype",
+                        "fa-slack": "Slack",
+                        "fa-snapchat-square": "Snapchat",
+                        "fa-soundcloud": "Soundcloud",
+                        "fa-steam-square": "Steam",
+                        "fa-telegram": "Telegram",
+                        "fa-tumblr-square": "Tumblr",
+                        "fa-twitter-square": "Twitter",
+                        "fa-vimeo-square": "Vimeo",
+                        "fa-wordpress": "Wordpress",
+                        "fa-xing-square": "Xing",
+                        "fa-youtube-square": "YouTube"
+                    },
+                    "default_value": [],
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value",
+                    "key": "field_5866972982bc1",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "default_value": 1,
+                    "message": "",
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "key": "field_58676e19d1dfe",
+                    "label": "Open in new tab",
+                    "name": "target_blank",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "collapsed": "",
+            "key": "field_586697297daab",
+            "label": "Social Links",
+            "name": "social_links",
+            "type": "repeater",
+            "instructions": "Click 'Add Row' to add a new link. Enter the link target (e.g. the url of your profile), a title (shown when the user hovers over the link) and choose an icon for the link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-social-links"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1483173449
+}
