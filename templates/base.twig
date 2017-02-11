@@ -13,42 +13,43 @@
     <link rel="pingback" href="{{site.pingback_url}}" />
 
     {{function('wp_head')}}
-	  {% block head %}{% endblock %}
-	</head>
+	{% block head %}{% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-			<a class="navbar-brand" href="{{site.url}}">{{site.name}}</a>
+</head>
 
-			{% include "menu.twig" with {'menu': menu.get_items} %}
-		</nav>
+<body class="{{body_class}}" data-template="base.twig">
+	<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+		<a class="navbar-brand" href="{{site.url}}">{{site.name}}</a>
 
-		<div class="wrapper {{sidebar_class}}">
-			{% if sidebar %}
-				<div class="row">
-					<div class="col-md-9">
-			{% endif %}
-						{% block content %}
-							Sorry, no content
-						{% endblock %}
-			{% if sidebar %}
-					</div>
-					<div class="col-md-3">
-						<aside class="layout-sidebar">
-							{{sidebar}}
-						</aside>
-					</div>
+		{% include "menu.twig" with {'menu': menu.get_items} %}
+	</nav>
+
+	<div class="wrapper {{sidebar_class}}">
+		{% if sidebar %}
+			<div class="row">
+				<div class="col-md-9">
+		{% endif %}
+					{% block content %}
+						Sorry, no content
+					{% endblock %}
+		{% if sidebar %}
 				</div>
-			{% endif %}
-    </div>
+				<div class="col-md-3">
+					<aside class="layout-sidebar">
+						{{sidebar}}
+					</aside>
+				</div>
+			</div>
+		{% endif %}
+	</div>
 
-		{% block footer %}
-			<footer class="container-fluid">
-				{% include 'footer.twig' %}
-			</footer>
-		{% endblock %}
+	{% block footer %}
+		<footer class="container-fluid">
+			{% include 'footer.twig' %}
+		</footer>
+	{% endblock %}
 
-    <script type="text/javascript" src="{{site.theme.link}}/static/js/main.js"></script>
-    {{ function('wp_footer') }}
-	</body>
+	<script type="text/javascript" src="{{site.theme.link}}/static/js/main.js"></script>
+	{{ function('wp_footer') }}
+</body>
 </html>
