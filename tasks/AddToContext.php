@@ -25,8 +25,8 @@ class AddToContext extends Task
 	 */
 	function addToContext($context)
 	{
-        $context['primary'] = new TimberMenu('primary');
-        $context['footer'] = new TimberMenu('footer');
+        $context['primary_menu'] = new TimberMenu('primary');
+        $context['footer_menu'] = new TimberMenu('footer');
 
         $site = $this->site;
 		$title = wp_title('–', false, 'right');

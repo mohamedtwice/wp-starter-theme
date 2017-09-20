@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
 		<a class="navbar-brand" href="{{site.url}}">{{site.name}}</a>
 
-		{% include "menu.twig" with {'menu': menu.get_items} %}
+		{% include "menu.twig" with {'menu': primary_menu.get_items} %}
 	</nav>
 
 	<div class="wrapper {{sidebar_class}}">
