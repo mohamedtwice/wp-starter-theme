@@ -4,9 +4,9 @@
 	{% if post.get_thumbnail %}
 		<a href="{{post.link}}"><img src="{{post.thumbnail.src}}" class="card-img-top" /></a>
 	{% endif %}
-	<div class="card-block">
+	<div class="card-body">
 		<h2 class="card-title h4"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview(70, false, '')}}</p>
+		<p class="card-text">{{post.get_preview(70, false, '')}}</p>
 		<a href="{{post.link}}" class="btn btn-primary btn-sm">{{__('Read more', 'wp-starter-theme')}}</a>
 	</div>
 {% endblock %}

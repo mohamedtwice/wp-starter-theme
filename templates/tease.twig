@@ -1,11 +1,11 @@
 <article class="card">
 	{% block content %}
 		{% if post.get_thumbnail %}
-		<img src="{{post.thumbnail.src}}" class="card-img-top" />
+		  <img src="{{post.thumbnail.src}}" class="card-img-top" />
 		{% endif %}
-		<div class="card-block">
-			<h2><a href="{{post.link}}">{{post.title}}</a></h2>
-			<p>{{post.get_preview}}</p>
+		<div class="card-body">
+			<h2 class="card-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+			<p class="card-text">{{post.get_preview}}</p>
 		</div>
 	{% endblock %}
 </article>

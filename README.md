@@ -15,8 +15,9 @@
 1. Clone this themes in your themes directory.
 2. `composer install`
 3. `npm install`
-4. Activate the theme in Appearance >  Themes.
-5. Do your thing!
+4. Install and activate [timber-library](https://wordpress.org/plugins/timber-library) and [advanced-custom-fields](https://wordpress.org/plugins/advanced-custom-fields) (or acf pro)
+5. Activate the theme in Appearance >  Themes.
+6. Do your thing!
 
 ## What's here?
 

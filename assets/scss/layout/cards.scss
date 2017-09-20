@@ -3,4 +3,12 @@
     width: 100%;
     height: auto;
   }
+
+  .posts & {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: inherit;
+    }
+  }
 }
