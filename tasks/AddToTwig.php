@@ -6,7 +6,7 @@ use \Twig_Extension_StringLoader;
 use \Twig_SimpleFilter;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-theme'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-starter-theme'));
 
 /**
  * Add Functions and Extensions to Twig

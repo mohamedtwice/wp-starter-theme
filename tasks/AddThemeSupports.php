@@ -3,7 +3,7 @@
 namespace Sehrgut\StarterTheme\Tasks;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-theme'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-starter-theme'));
 
 /**
  * Add Theme Supports
@@ -21,7 +21,7 @@ class AddThemeSupports extends Task
      * Enable multiple language translations and load them from /languages.
      */
     public function addLanguageSupport(){
-        load_theme_textdomain('zs-verlag-theme', get_template_directory().'/languages');
+        load_theme_textdomain('wp-starter-theme', get_template_directory().'/languages');
     }
 
     /**

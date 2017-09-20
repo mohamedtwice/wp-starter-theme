@@ -3,7 +3,7 @@
 namespace Sehrgut\StarterTheme\Tasks;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-theme'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-starter-theme'));
 
 /**
  * Enqueue Resources (Styles, Scripts) needed by the theme
@@ -21,7 +21,7 @@ class EnqueueResources extends Task
     ];
 
     protected $scripts = [
-        'zs-theme-lib' => [
+        'theme-lib' => [
             'path' => 'static/js/main.js',
             'version' => '1.0',
             'dependencies' => [],

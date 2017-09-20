@@ -3,7 +3,7 @@
 namespace Sehrgut\StarterTheme\Tasks;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-theme'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-starter-theme'));
 
 /**
  * Add Theme Supports

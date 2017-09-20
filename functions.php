@@ -16,6 +16,7 @@ if (! class_exists('Timber')) {
 Timber::$dirname = ['templates', 'views'];
 
 // Dependencies & Tasks
+require_once('lib/BlocksManager.php');
 require_once('lib/Guard.php');
 require_once('lib/QueryParser.php');
 require_once('lib/SocialSharingHelper.php');

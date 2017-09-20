@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block head_meta %}
+	{% include "head-meta.twig" with {
+			noindex: post.meta_noindex,
+			title: post.meta_title ?: null,
+			description: post.meta_description ?: null,
+			image: post.thumbnail ? TimberImage(post.thumbnail).src : null,
+			url: post.link,
+		}
+	%}
+{% endblock %}
+
+{% block content %}
+	{% for item in content_blocks %}
+		{% include item.template with item.data %}
+	{% endfor %}
+{% endblock %}
