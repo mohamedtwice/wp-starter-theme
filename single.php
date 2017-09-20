@@ -9,18 +9,16 @@
  * @since    Timber 0.1
  */
 
+use Sehrgut\StarterTheme\Lib\Guard;
+
 $context = Timber::get_context();
 $post = Timber::query_post();
+
+Guard::knock($post, $context);
 
 $post->by_line = sprintf(
 	__("By %s", 'wp-starter-theme'),
 	'<a href="'.$post->author->path.'">'.$post->author->name.'</a>'
 );
-
 $context['post'] = $post;
-
-if ( post_password_required( $post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
-} else {
-	Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );
-}
+Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );

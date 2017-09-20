@@ -21,7 +21,12 @@
  * @since    Timber 0.1
  */
 
+use Sehrgut\StarterTheme\Lib\Guard;
+
 $context = Timber::get_context();
 $post = new TimberPost();
+
+Guard::knock($post, $context);
+
 $context['post'] = $post;
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
