@@ -1,9 +1,6 @@
-// Core variables and mixins
-@import "custom-bootstrap";
+@import "custom";
 @import "mixins/admin-sticky-fix";
 
-@import "layout";
-@import "navigation";
-@import "typography";
+@import "~bootstrap/scss/bootstrap";
 
-@import "social-links";
+@import "layout";

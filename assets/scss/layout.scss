@@ -1,7 +1,11 @@
 body {
-  padding-top: 5rem;
+	padding-top: $st-navbar-fixed-space;
 }
 
-@import "layout/image-alignment";
-@import "layout/comments";
-@import "layout/cards";
+.navbar.fixed-top {
+  @include admin-sticky-fix;
+}
+
+.posts > .card {
+	margin: $spacer 0;
+}

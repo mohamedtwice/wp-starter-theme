@@ -3,7 +3,7 @@
  *
  * @param  {number} $offset: 0   The scroll offset
  */
-@mixin admin-sticky-fix( $offset: 0 ) {
+ @mixin admin-sticky-fix( $offset: 0 ) {
   $narrow-offset: 46px;
   $wide-offset: 32px;
 
@@ -11,6 +11,7 @@
     $narrow-offset: $narrow-offset + $offset;
     $wide-offset: $wide-offset + $offset;
   }
+
   .admin-bar & {
     top: $narrow-offset;
     position: absolute;
