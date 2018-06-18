@@ -12,7 +12,7 @@
 
 ## Installing the Theme
 
-1. Clone this themes in your themes directory.
+1. Clone this theme into your `themes` directory.
 2. `composer install`
 3. `npm install`
 4. Install and activate [timber-library](https://wordpress.org/plugins/timber-library) and [advanced-custom-fields](https://wordpress.org/plugins/advanced-custom-fields) (or acf pro)
