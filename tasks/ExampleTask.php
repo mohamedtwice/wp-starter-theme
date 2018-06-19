@@ -21,7 +21,13 @@ class ExampleTask extends Task
         'some_filter' => ['myCallbackWithParameters', 10, 2],
     ];
 
-    public function myCallback() { }
+    public function myCallback()
+    {
+        //
+    }
 
-    public function myCallbackWithParameters($param1, $param2) { }
+    public function myCallbackWithParameters($param1, $param2)
+    {
+        //
+    }
 }

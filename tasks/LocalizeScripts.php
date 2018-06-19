@@ -52,7 +52,7 @@ class LocalizeScripts extends Task
     public function localize()
     {
         foreach ($this->script_handles as $handle) {
-            wp_localize_script($handle , $this->object_name, $this->getTranslations());
+            wp_localize_script($handle, $this->object_name, $this->getTranslations());
         }
     }
 }

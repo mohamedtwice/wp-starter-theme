@@ -40,18 +40,20 @@ class Task
     {
         $this->site = $site;
         $this->registerHooks();
-        $this->justDoIt();
+        $this->onTaskInit();
     }
 
     /**
-     * Some tasks don't have to be hooked to anything. To just run theme
-     * put them in here...
+     * Hook in here to perform actions on task initialization.
+     *
+     * Some tasks don't have to be hooked to anything. This method
+     * is called when the task is loaded (on plugin construct).
      *
      * @return void
      */
-    public function justDoIt()
+    public function onTaskInit()
     {
-        // add stuff
+        //
     }
 
     /**
@@ -64,11 +66,11 @@ class Task
         foreach ($this->hooks as $hook => $method) {
             if (is_string($method)) {
                 add_filter($hook, [$this, $method]);
-            }
-            elseif (is_array($method)) {
+            } elseif (is_array($method)) {
                 add_filter($hook, [$this, $method[0]], $method[1], $method[2]);
             }
         }
+
         return $this;
     }
 }

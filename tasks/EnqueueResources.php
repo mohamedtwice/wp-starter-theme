@@ -37,7 +37,7 @@ class EnqueueResources extends Task
                 $handle,
                 $path,
                 $script['dependencies'],
-                              $script['version'],
+                $script['version'],
                 $script['in_footer']
             );
         }

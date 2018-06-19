@@ -17,14 +17,14 @@ class CreateOptionsPages extends Task
     ];
 
     /**
-	 * Create options pages using ACF to expose global theme settings.
-	 *
-	 * @return void
-	 */
-	public function createOptionsPages()
-	{
+     * Create options pages using ACF to expose global theme settings.
+     *
+     * @return void
+     */
+    public function createOptionsPages()
+    {
         //* Options Pages
-		$theme_options = acf_add_options_page([
+        $theme_options = acf_add_options_page([
             'page_title' => __('Theme Options', 'wp-starter-theme'),
             'menu_title' => __('Theme Options', 'wp-starter-theme'),
             'menu_slug' => 'theme-options',
@@ -45,7 +45,6 @@ class CreateOptionsPages extends Task
             'menu_slug' => 'theme-options-sharing',
             'parent_slug' => $theme_options['menu_slug'],
         ]);
-
 
         //* AC Fields
 
@@ -163,7 +162,6 @@ class CreateOptionsPages extends Task
             'description' => '',
         ]);
 
-
         // Theme Options: Social Sharing
         acf_add_local_field_group([
             'key' => 'group_theme_options_sharing',
@@ -203,6 +201,5 @@ class CreateOptionsPages extends Task
             'active' => 1,
             'description' => '',
         ]);
-
-	}
+    }
 }

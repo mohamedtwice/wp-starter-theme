@@ -20,21 +20,23 @@ class AddThemeSupports extends Task
     /**
      * Enable multiple language translations and load them from /languages.
      */
-    public function addLanguageSupport(){
-        load_theme_textdomain('wp-starter-theme', get_template_directory().'/languages');
+    public function addLanguageSupport()
+    {
+        load_theme_textdomain('wp-starter-theme', get_template_directory() . '/languages');
     }
 
     /**
      * {@inheritdoc}
      */
-    public function justDoIt() {
+    public function onTaskInit()
+    {
         add_theme_support('post-formats', []);
         add_theme_support('post-thumbnails');
         add_theme_support('menus');
         add_theme_support('custom-logo', [
-            'height'      => 100,
-            'width'       => 200,
-            'flex-width'  => true,
+            'height' => 100,
+            'width' => 200,
+            'flex-width' => true,
         ]);
     }
 }

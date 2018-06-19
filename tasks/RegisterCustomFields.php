@@ -25,7 +25,10 @@ class RegisterCustomFields extends Task
         $this->addDefaultPageFields();
     }
 
-    protected function addDefaultPostFields() { }
+    protected function addDefaultPostFields()
+    {
+        //
+    }
 
     protected function addDefaultPageFields()
     {
@@ -79,4 +82,5 @@ class RegisterCustomFields extends Task
                 'send-trackbacks',
             ]
         ]);
-    }}
+    }
+}
