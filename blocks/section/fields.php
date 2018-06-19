@@ -19,7 +19,6 @@ $fields = [
                 'key' => 'field_section_title',
                 'name' => 'title',
                 'label' => __('Title', 'wp-starter-theme'),
-                'instructions' => __('optional', 'wp-starter-theme'),
                 'placeholder' => __('Put the section title in here', 'wp-starter-theme'),
                 'type' => 'text',
             ],
@@ -58,12 +57,21 @@ $fields = [
                         'ui' => true,
                         'default_value' => false,
                         'wrapper' => ['width' => '25%'],
+                        // 'conditional_logic' => [
+                        //     [
+                        //         [
+                        //             'field' => 'field_section_background_fluid',
+                        //             'operator' => '==',
+                        //             'value' => 1,
+                        //         ]
+                        //     ]
+                        // ],
                     ],
                     [
                         'key' => 'field_columns_layout_min_height',
                         'name' => 'min_height',
                         'label' => __('Section Minimum Height', 'wp-starter-theme'),
-                        'instructions' => __('optional, useful in conjunction with background image', 'wp-starter-theme'),
+                        'instructions' => __('optional, useful with background images', 'wp-starter-theme'),
                         'placeholder' => __('e.g. 90vh, 300px, etc.', 'wp-starter-theme'),
                         'type' => 'text',
                         'wrapper' => ['width' => '25%'],
@@ -72,6 +80,7 @@ $fields = [
                         'key' => 'field_section_layout_padding_top',
                         'name' => 'padding_top_class',
                         'label' => __('Top Padding', 'wp-starter-theme'),
+                        'instructions' => __('Choose between three styles', 'wp-starter-theme'),
                         'type' => 'select',
                         'default_value' => 'padding-top',
                         'choices' => [
@@ -85,6 +94,7 @@ $fields = [
                         'key' => 'field_section_layout_padding_bottom',
                         'name' => 'padding_bottom_class',
                         'label' => __('Bottom Padding', 'wp-starter-theme'),
+                        'instructions' => __('Choose between three styles', 'wp-starter-theme'),
                         'type' => 'select',
                         'default_value' => 'padding-bottom',
                         'choices' => [
@@ -108,10 +118,11 @@ $fields = [
                         'key' => 'field_section_background_fluid',
                         'name' => 'fluid',
                         'label' => __('Full Width', 'wp-starter-theme'),
+                        'instructions' => __('Display background-color or -image full-width', 'wp-starter-theme'),
                         'type' => 'true_false',
                         'ui' => true,
                         'default_value' => false,
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                     [
                         'key' => 'field_section_background_color',
@@ -119,7 +130,7 @@ $fields = [
                         'label' => __('Color', 'wp-starter-theme'),
                         'instructions' => __('optional', 'wp-starter-theme'),
                         'type' => 'color_picker',
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                     [
                         'key' => 'field_section_background_image',
@@ -127,7 +138,7 @@ $fields = [
                         'label' => __('Image', 'wp-starter-theme'),
                         'instructions' => __('optional', 'wp-starter-theme'),
                         'type' => 'image',
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                 ],
             ],
@@ -145,7 +156,7 @@ $fields = [
                         'label' => __('Title Color', 'wp-starter-theme'),
                         'instructions' => __('optional', 'wp-starter-theme'),
                         'type' => 'color_picker',
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                     [
                         'key' => 'field_section_text_color',
@@ -153,7 +164,7 @@ $fields = [
                         'label' => __('Text Color', 'wp-starter-theme'),
                         'instructions' => __('optional', 'wp-starter-theme'),
                         'type' => 'color_picker',
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                 ]
             ],
@@ -173,7 +184,7 @@ $fields = [
                         'type' => 'true_false',
                         'ui' => true,
                         'default_value' => false,
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                     [
                         'key' => 'field_section_shadows_bottom',
@@ -182,7 +193,7 @@ $fields = [
                         'type' => 'true_false',
                         'ui' => true,
                         'default_value' => false,
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                     [
                         'key' => 'field_section_border_bottom',
@@ -191,7 +202,7 @@ $fields = [
                         'type' => 'true_false',
                         'ui' => true,
                         'default_value' => false,
-                        'wrapper' => ['width' => '33%'],
+                        'wrapper' => ['width' => '25%'],
                     ],
                 ]
             ],
@@ -206,7 +217,8 @@ $fields = [
                 'key' => 'field_section_anchor',
                 'name' => 'anchor',
                 'label' => __('Anchor Name', 'wp-starter-theme'),
-                // 'placeholder' => __('', 'wp-starter-theme'),
+                'instructions' => __('Necessary when deep-linking to this section', 'wp-starter-theme'),
+                'placeholder' => _x('eg. about-us', 'Placeholder for "Anchor Name" field in section block', 'wp-starter-theme'),
                 'type' => 'text',
                 // 'wrapper' => ['width' => '50%'],
             ],
