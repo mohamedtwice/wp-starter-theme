@@ -16,4 +16,4 @@ $context['post'] = $post;
 $content_blocks = $post->get_field('content_blocks');
 $context['content_blocks'] = BlocksManager::resolveBlocks($content_blocks, $post);
 
-Timber::render('page-blocks.twig', $context );
+Timber::render('page-blocks.twig', $context);

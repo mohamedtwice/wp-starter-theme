@@ -45,7 +45,7 @@ class RegisterCustomFields extends Task
                     'instructions' => __('Add as many content blocks as you wish. Content blocks can be sorted via drag & drop.', 'wp-starter-theme'),
                     'min' => 1,
                     'layouts' => BlocksManager::getBlocks([
-                        'wysiwyg',
+                        'section',
                     ])
                 ],
             ],

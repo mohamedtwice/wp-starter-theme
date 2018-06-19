@@ -4,10 +4,10 @@ namespace Sehrgut\StarterTheme\Lib;
 
 class BlocksManager
 {
-
     private static $blocks = [
         // Available blocks
-        'wysiwyg'
+        'section',
+        'wysiwyg',
     ];
 
     public static function resolveBlocks($content_blocks, $post, $templates = ['template'])

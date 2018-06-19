@@ -1,0 +1,26 @@
+.block-section {
+  margin: $section-margin-vertical 0;
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-container {
+    &.border-bottom {
+      border-bottom: 1px solid rgba(theme-color("primary"), .4);
+    }
+
+    &.padding-top {
+      padding-top: $section-padding-vertical;
+    }
+    &.padding-top-lg {
+      padding-top: $section-padding-vertical-lg;
+    }
+    &.padding-bottom {
+      padding-bottom: $section-padding-vertical;
+    }
+    &.padding-bottom-lg {
+      padding-bottom: $section-padding-vertical-lg;
+    }
+  }
+}

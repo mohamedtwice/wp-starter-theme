@@ -1,0 +1,48 @@
+<section
+  class="block-section"
+  style="
+    {% if background.fluid and background.color %}background-color: {{ background.color }};{% endif %}
+    {% if background.fluid and background.image %}
+      background-size: cover;
+    {% endif %}
+  "
+  {% if background.fluid and background.image %}
+    {% include 'responsive-background-image.twig' %}
+  {% endif %}
+
+  {% if anchor %} id="{{ anchor }}" {% endif %}
+>
+  <div
+    class="
+      section-container
+      {% if shadows.top %}shadow-top{% endif %}
+      {% if shadows.bottom %}shadow-bottom{% endif %}
+      {% if shadows.border_bottom %}border-bottom{% endif %}
+      {% if layout.fluid and background.fluid %}container-fluid no-gutters{% else %}container{% endif %}
+      {{ layout.padding_top_class }}
+      {{ layout.padding_bottom_class }}
+    "
+    style="
+      {% if layout.min_height %}min-height: {{ layout.min_height }};{% endif %}
+      {% if text.text_color %}color: {{ text.text_color }};{% endif %}
+      {% if not background.fluid and background.color %}background-color: {{ background.color }};{% endif %}
+    "
+    {% if not background.fluid and background.image %}
+      {% include 'responsive-background-image.twig' %}
+    {% endif %}
+  >
+
+    {% if title %}
+      <div {% if layout.fluid and background.fluid %}class="container"{% endif %}>
+        <h1 class="section-title" {% if text.title_color %}style="color: {{ text.title_color }};"{% endif %}>
+          {{ title }}
+        </h1>
+      </div>
+    {% endif %}
+
+    {% for item in content_blocks %}
+      {% include item.template with item.data %}
+    {% endfor %}
+  </div>
+</section>
+
