@@ -2,15 +2,12 @@
 
 namespace Sehrgut\StarterTheme\Tasks;
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-starter-theme'));
-
 use Sehrgut\StarterTheme\Lib\BlocksManager;
 
 /**
  * Register ACF Fields for the template
  */
-class RegisterCustomFields extends Task
+class RegisterFieldsForBlocksPage extends Task
 {
     /**
      * {@inheritdoc}
@@ -20,17 +17,6 @@ class RegisterCustomFields extends Task
     ];
 
     public function registerCustomFields()
-    {
-        $this->addDefaultPostFields();
-        $this->addDefaultPageFields();
-    }
-
-    protected function addDefaultPostFields()
-    {
-        //
-    }
-
-    protected function addDefaultPageFields()
     {
         acf_add_local_field_group([
             'key' => 'default_page',
