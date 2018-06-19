@@ -29,6 +29,7 @@ require_once('tasks/EnqueueResources.php');
 require_once('tasks/CreateOptionsPages.php');
 require_once('tasks/LocalizeScripts.php');
 require_once('tasks/RegisterCustomFields.php');
+require_once('tasks/FriendlyLayoutTitles.php');
 
 /**
  * Our Theme class.
@@ -49,6 +50,7 @@ class StarterSite extends TimberSite
         Sehrgut\StarterTheme\Tasks\CreateOptionsPages::class,
         Sehrgut\StarterTheme\Tasks\LocalizeScripts::class,
         Sehrgut\StarterTheme\Tasks\RegisterCustomFields::class,
+        Sehrgut\StarterTheme\Tasks\FriendlyLayoutTitles::class,
     ];
 
     /**
